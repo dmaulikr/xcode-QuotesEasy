@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go Warriors!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-Si-66n">
-                                <rect key="frame" x="20" y="28" width="560" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Warriors!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-Si-66n">
+                                <rect key="frame" x="20" y="296" width="560" height="149"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTe-JV-fA2">
-                                <rect key="frame" x="262" y="285" width="77" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeitelBlue.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-A7-6Pm">
+                                <rect key="frame" x="235" y="67" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Vmw-L5-iuB"/>
+                                    <constraint firstAttribute="height" constant="130" id="mA3-jE-LIX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTe-JV-fA2">
+                                <rect key="frame" x="262" y="438" width="77" height="30"/>
                                 <state key="normal" title="Touch here">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="btnTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ver-OU-rsL"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xod-A7-6Pm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="2QI-Vg-B0C"/>
+                            <constraint firstItem="jS1-Si-66n" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4uB-sH-jmY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JTe-JV-fA2" secondAttribute="bottom" constant="132" id="HVh-0v-IBO"/>
+                            <constraint firstItem="jS1-Si-66n" firstAttribute="centerX" secondItem="JTe-JV-fA2" secondAttribute="centerX" id="cR9-qN-c0w"/>
+                            <constraint firstItem="jS1-Si-66n" firstAttribute="centerX" secondItem="Xod-A7-6Pm" secondAttribute="centerX" id="kfj-2w-nUh"/>
+                            <constraint firstItem="jS1-Si-66n" firstAttribute="top" secondItem="Xod-A7-6Pm" secondAttribute="bottom" constant="99" id="ku1-jk-u7J"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jS1-Si-66n" secondAttribute="bottom" constant="155" id="w0K-pM-Za7"/>
+                            <constraint firstItem="jS1-Si-66n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zT4-rn-AW4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="lblQuote" destination="jS1-Si-66n" id="wXA-jO-0ip"/>
@@ -44,4 +63,7 @@
             <point key="canvasLocation" x="245" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DeitelBlue.png" width="512" height="512"/>
+    </resources>
 </document>
